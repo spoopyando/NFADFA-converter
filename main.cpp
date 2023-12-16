@@ -11,6 +11,8 @@
 #include "displayStateInputs.hpp"
 #include "getStateTransitions.hpp"
 #include "displayStateTransitions.hpp"
+#include "getAcceptingStates.hpp"
+#include "displayAcceptingStates.hpp"
 
 //----------------------------------------------------------//
 // How to compile:
@@ -35,6 +37,11 @@ int main(){
     std::vector<char> states = getStates();
     std::cout << "\n--------------------- Displaying states -----------------------\n";
     displayStates(states);
+
+    std::cout << "\n--------------------- Getting accepting states -----------------------\n";
+    std::vector<char> acceptingStates = getAcceptingStates(states);
+    std::cout << "\n--------------------- Displaying accepting states -----------------------\n";
+    displayAcceptingStates(acceptingStates);
 
     // Get inputs on states
     std::cout << "\n--------------------- Getting state inputs -----------------------\n";
